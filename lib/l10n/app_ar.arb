@@ -1,0 +1,20 @@
+{
+  "app_name" : "اسلامي",
+  "quran" : "قران",
+  "hadeth" : "حديث",
+  "tasbeh" : "تسبيح",
+  "radio" : "اذاعة",
+  "settings" : "اعدادت",
+  "chapter_name" : "اسم السورة",
+  "hadeth_number" : "رقم الحديث",
+  "sobhan_allah": "سبحان الله",
+  "alhamdullah": "الحمدلله",
+  "allah_akbar": "الله اكبر",
+  "number_of_tasbehat" : "عدد التسبيحات",
+  "theme": "السمة",
+  "language" : "اللغة",
+  "dark" : "ليلي",
+  "light" : "نهاري"
+
+
+}

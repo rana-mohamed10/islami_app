@@ -1,0 +1,19 @@
+{
+"app_name" : "Islami",
+  "quran" : "Quran",
+  "hadeth" : "Hadeth",
+  "tasbeh" : "Tasbeh",
+  "radio" : "Radio",
+  "settings" : "Settings",
+  "chapter_name" : "Chapter Name",
+  "hadeth_number" : "Hadeth Number",
+  "sobhan_allah": "Sobhan Allah",
+  "alhamdullah": "Alhamdullah",
+  "allah_akbar": "Allah Akbar",
+  "number_of_tasbehat" : "Number Of Tasbehat",
+  "theme": "Theme",
+  "language" : "Language",
+  "dark" : "Dark",
+  "light" : "Light"
+
+}
