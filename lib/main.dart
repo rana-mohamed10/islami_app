@@ -3,6 +3,7 @@ import 'package:islami_app/MyThemeData.dart';
 import 'package:islami_app/Providers/SettingsProvider.dart';
 import 'package:islami_app/chapter_details/ChapterDetails.dart';
 import 'package:islami_app/home/HomeScreen.dart';
+import 'package:islami_app/home/Splash.dart';
 import 'package:islami_app/home/tasbeh/TasbehTab.dart';
 import 'package:provider/provider.dart';
 import 'Hadeth_details/HadethDetailsScreen.dart';
@@ -41,9 +42,10 @@ class MyApp extends StatelessWidget {
         HomeScreen.routeName: (_) => HomeScreen(),
         ChapterDetailsScreen.routeName: (_) => ChapterDetailsScreen(),
         HadethDetailsScreen.routeName:(_)=>HadethDetailsScreen(),
-        TasbehTab.routeName:(_)=> TasbehTab()
+        TasbehTab.routeName:(_)=> TasbehTab(),
+        SplashScreen.routeName:(_)=> SplashScreen()
       },
-      initialRoute: HomeScreen.routeName,
+      initialRoute: SplashScreen.routeName,
     );
   }
 }
