@@ -14,6 +14,7 @@ void main() async{
   WidgetsFlutterBinding.ensureInitialized();
   var settingProvider=SettingProvider();
   await settingProvider.loadTheme();
+  await settingProvider.loadLocale();
   runApp(ChangeNotifierProvider(
     create: (BuildContext)=>settingProvider,
       child: MyApp()));

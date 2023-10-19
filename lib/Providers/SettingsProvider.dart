@@ -20,6 +20,7 @@ class SettingProvider extends ChangeNotifier{
   void ChangeLang(locale){
     if (currentlocale==locale)return;
     currentlocale=locale;
+    SaveLocale(locale);
     notifyListeners();
   }
   String GetBackground(){
@@ -48,6 +49,25 @@ class SettingProvider extends ChangeNotifier{
       theme=='dark'
           ?currentTheme=ThemeMode.dark
           :currentTheme=ThemeMode.light;
+    }
+  }
+  Future<void>SaveLocale(String locale)async{
+    String lang= locale=='en'
+        ?'en'
+        :'ar';
+    await preference?.setString('language', lang);
+  }
+
+  String? getLocale(){
+    return preference?.getString('language');
+  }
+  Future<void>loadLocale() async{
+    preference= await SharedPreferences.getInstance();
+    String? locale=getLocale();
+    if (locale !=null){
+      locale=='en'
+          ?currentlocale='en'
+          :currentlocale='ar';
     }
   }
 
