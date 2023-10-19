@@ -16,7 +16,7 @@ class SettingProvider extends ChangeNotifier{
   }
   void ChangeLang(locale){
     if (currentlocale==locale)return;
-    currentlocale='ar';
+    currentlocale=locale;
     notifyListeners();
   }
   String GetBackground(){
