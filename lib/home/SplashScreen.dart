@@ -10,7 +10,7 @@ class SplashScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var settingProvider = Provider.of<SettingProvider>(context);
+    var settingProvider = SettingProvider();
     return FutureBuilder(
       future: settingProvider.loadTheme(),
       builder: (BuildContext context, AsyncSnapshot snapshot) {
@@ -25,7 +25,7 @@ class SplashScreen extends StatelessWidget {
             body: Image(
               fit: BoxFit.fill,
               width: double.infinity,
-              image: theme == 'light'
+              image: settingProvider.currentTheme==ThemeMode.light
                   ? AssetImage('assets/images/splash.png')
                   : AssetImage('assets/images/splash – 1.png'),
             ),

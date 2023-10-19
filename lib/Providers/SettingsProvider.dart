@@ -13,6 +13,7 @@ class SettingProvider extends ChangeNotifier{
   void changeTheme(ThemeMode newMode){
     if (currentTheme==newMode)return;
     currentTheme=newMode;
+    SaveTheme(newMode);
     notifyListeners();
 
   }
