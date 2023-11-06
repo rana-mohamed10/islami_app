@@ -1,3 +1,4 @@
+import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/material.dart';
 import 'package:islami_app/MyThemeData.dart';
 import 'package:islami_app/Providers/SettingsProvider.dart';
@@ -15,12 +16,17 @@ void main() async{
   var settingProvider=SettingProvider();
   await settingProvider.loadTheme();
   await settingProvider.loadLocale();
-  runApp(ChangeNotifierProvider(
+  final AudioPlayer? audioPlayer = AudioPlayer();
+  runApp(
+      ChangeNotifierProvider(
     create: (BuildContext)=>settingProvider,
-      child: MyApp()));
+      child: MyApp(audioPlayer!)));
 }
 
 class MyApp extends StatelessWidget {
+  final AudioPlayer? audioPlayer;
+
+  MyApp([this.audioPlayer]);
 
   // This widget is the root of your application.
   @override
